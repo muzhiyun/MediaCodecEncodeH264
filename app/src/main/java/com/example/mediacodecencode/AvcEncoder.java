@@ -17,7 +17,7 @@ import android.util.Log;
 public class AvcEncoder 
 {
 	private final static String TAG = "MeidaCodec";
-	
+
 	private int TIMEOUT_USEC = 12000;
 
 	private MediaCodec mediaCodec;
@@ -26,8 +26,8 @@ public class AvcEncoder
 	int m_framerate;
 	byte[] m_info = null;
 	 
-	public byte[] configbyte; 
-
+	public byte[] configbyte;
+	public boolean isRuning = false;
 
 	@SuppressLint("NewApi")
 	public AvcEncoder(int width, int height, int framerate, int bitrate) { 
@@ -47,6 +47,7 @@ public class AvcEncoder
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		Log.e("createEncoderByType", "Encoder Name: "+mediaCodec.getName() );
 	    mediaCodec.configure(mediaFormat, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
 	    mediaCodec.start();
 	    createfile();
@@ -80,7 +81,7 @@ public class AvcEncoder
 	ByteBuffer[] inputBuffers;
 	ByteBuffer[] outputBuffers;
 
-	public boolean isRuning = false;
+
 	
 	public void StopThread(){
 		isRuning = false;
@@ -189,8 +190,9 @@ public class AvcEncoder
 		  nv12[framesize + j] = nv21[j+framesize-1];
 		}
 	}
-	
-    /**
+
+
+	/**
      * Generates the presentation time for frame N, in microseconds.
      */
     private long computePresentationTime(long frameIndex) {
