@@ -50,9 +50,9 @@ import android.widget.Switch;
 public class MainActivity extends Activity  implements SurfaceHolder.Callback,PreviewCallback{
 
     // Used to load the 'native-lib' library on application startup.
-    /*static {
+    static {
         System.loadLibrary("native-lib");
-    }*/
+    }
     private static final int UPDATE_TEXT = 201700;
     private SurfaceView surfaceview;
     private SurfaceHolder surfaceHolder;
@@ -97,7 +97,10 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
      * A native method that is implemented by the 'native-lib' native library,
      * which is packaged with this application.
      */
-    public native String stringFromJNI();
+    //public native String stringFromJNI();
+
+    // Example of a call to a native method
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -119,6 +122,8 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
 	}
     Button Button_switch ;
     Button Button_send ;
+    Button Button_play ;
+
 	private void init(){
 	    switch(video_select)
         {
@@ -152,6 +157,8 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
         surfaceHolder.addCallback(this);
         Button_switch = (Button) findViewById(R.id.button_switch);
         Button_send = (Button) findViewById(R.id.button_send);
+        Button_play = (Button) findViewById(R.id.button_play);
+
     }
 
 
@@ -325,6 +332,13 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
         }
     }
 
+    public void PlayYuv(View view) throws FileNotFoundException {
+        //YuvPlayer yuvPlayer = new YuvPlayer();
+        Log.e("Main","PlayYUV");
+
+
+
+    }
     public void SwitchSource(View view) throws FileNotFoundException {
         // Do something in response to button click
         //Button button = (Button) findViewById(R.id.button_switch);
@@ -334,7 +348,7 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
         SharedPreferences sp = ctx.getSharedPreferences("DataStorage", MODE_PRIVATE);
         //存入数据
         SharedPreferences.Editor editor = sp.edit();
-        Log.e("mtk22881","SourceFromFile="+SourceFromFile);
+        Log.e("Main","SourceFromFile="+SourceFromFile);
         if(SourceFromFile==false)
         {
             SourceFromFile=true;
@@ -388,9 +402,8 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
     }
 
     private int openfile() throws FileNotFoundException {
-        Log.e("mtk22881","openfile");
+        Log.e("Main","openfile");
         if(file.exists()) {
-            Log.e("mtk22881","openfile2");
             try {
                 Log.e("testCodec", "path=" + file.getPath() + ", data length=" + file.length());
                 //inputStream = new BufferedInputStream(new FileInputStream(file));
@@ -401,14 +414,14 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
             }
         }
         else{
-            Log.e("mtk22881","openfile3");
+            Log.e("Main","openfile3");
             return 1;
         }
         return 0;
     }
 
     private void createfile(){
-        Log.e("mtk22881","createfile");
+        Log.e("Main","createfile");
         File file = new File(path);
         if(file.exists()){
             file.delete();
@@ -422,7 +435,7 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
     }
 
     public void closefile(){
-        Log.e("mtk22881","closefile");
+        Log.e("Main","closefile");
         try {
             outputStream_create = false;
             if(SourceFromFile==false) outputStream.flush();
@@ -498,7 +511,7 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
 
 
     private void startcamera(Camera mCamera){
-        Log.e("mtk22881","startcamera");
+        Log.e("Main","startcamera");
         if(mCamera != null){
             try {
                 mCamera.setPreviewCallback(this);
@@ -523,7 +536,7 @@ public class MainActivity extends Activity  implements SurfaceHolder.Callback,Pr
 
     @TargetApi(9)
 	private Camera getBackCamera() {
-        Log.e("mtk22881","getBackCamera");
+        Log.e("Main","getBackCamera");
         Camera c = null;
         try {
             c = Camera.open(0); // attempt to get a Camera instance

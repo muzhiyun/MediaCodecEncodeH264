@@ -3,6 +3,7 @@ package com.example.mediacodecencode;
 import android.content.Context;
 import android.opengl.GLSurfaceView;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.SurfaceHolder;
 
 import javax.microedition.khronos.egl.EGLConfig;
@@ -15,6 +16,7 @@ public class YuvPlayer extends GLSurfaceView implements Runnable, SurfaceHolder.
 
     public YuvPlayer(Context context, AttributeSet attrs) {
         super(context, attrs);
+        Log.e("YUvPlayer","context= "+context + " attrs= " + attrs);
         setRenderer(this);
     }
 
@@ -35,7 +37,10 @@ public class YuvPlayer extends GLSurfaceView implements Runnable, SurfaceHolder.
 
     @Override
     public void run() {
-        loadYuv(PATH,getHolder().getSurface());
+     startPlay();
+    }
+    public void startPlay(){
+     loadYuv(PATH,getHolder().getSurface());
     }
 
     public native void loadYuv(String url, Object surface);
