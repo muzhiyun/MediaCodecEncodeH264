@@ -21,6 +21,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".YuvPlayer"
+            android:screenOrientation="fullSensor" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!--<category android:name="android.intent.category.BROWSABLE" />-->
+                <data android:scheme="file"/>
+                <data android:pathPattern=".*\\.yuv" />
+                <data android:pathPattern=".*\\.YUV" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

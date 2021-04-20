@@ -17,7 +17,9 @@ MediaCodec 编码 onPreviewFrame 回调的YUV数据为 h264
 
 另有参考如下项目，一并表示感谢：
 
-[YuvVideoPlayerDemo](https://github.com/yishuinanfeng/YuvVideoPlayerDemo)
+[yishuinanfeng/YuvVideoPlayerDemo](https://github.com/yishuinanfeng/YuvVideoPlayerDemo)
+
+[chinghungpan/MediaCodecDecodeRawStreamToYuv](https://github.com/chinghungpan/MediaCodecDecodeRawStreamToYuv)
 
 ### 目前改动如下：
 
