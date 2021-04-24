@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_encode"
+            android:icon="@drawable/ic_filmstrip_black_24dp"
+            android:title="@string/menu_encode" />
+        <item
+            android:id="@+id/nav_decode"
+            android:icon="@drawable/ic_alpha_h_box_black_24dp"
+            android:title="@string/menu_decode" />
+        <item
+            android:id="@+id/nav_yuvplayer"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_yuvplayer" />
+        <item
+            android:id="@+id/nav_h264player"
+            android:icon="@drawable/ic_movie_open_black_24dp"
+            android:title="@string/menu_h264player" />
+        <item
+            android:id="@+id/nav_mediacodecinfo"
+            android:icon="@drawable/ic_info_black_24dp"
+            android:title="@string/menu_mediacodecinfo" />
+        <item
+            android:id="@+id/nav_camera_manager"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_camera_manager" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@drawable/ic_settings_black_24dp"
+            android:title="@string/menu_setting" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_more_horiz_black_24dp"
+            android:title="@string/menu_more" />
+    </group>
+</menu>

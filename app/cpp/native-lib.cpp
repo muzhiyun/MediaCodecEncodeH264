@@ -100,7 +100,7 @@ GLint initShader(const char *source, GLint type) {
 
 extern "C"
 JNIEXPORT void JNICALL
-Java_com_example_mediacodecencode_YuvPlayer_loadYuv(JNIEnv *env, jobject thiz, jstring jUrl,
+Java_com_example_mediacodecencode_util_YuvPlayer_loadYuv(JNIEnv *env, jobject thiz, jstring jUrl,
                                                  jobject surface) {
     const char *url = env->GetStringUTFChars(jUrl, 0);
 

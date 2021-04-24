@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MediaCodecEncode</string>
+    <string name="app_name">MediaCodec Test Studio</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="button">Button</string>
     <string name="Stoping">Stoping</string>
     <string name="camera">Camera</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">MediaCodec Test suite</string>
+    <string name="nav_header_subtitle">my616422@126.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_encode">Encode</string>
+    <string name="menu_decode">Decode</string>
+    <string name="menu_yuvplayer">YUV_Player</string>
+    <string name="menu_h264player">H264_Player</string>
+    <string name="menu_mediacodecinfo">Mediacodecinfo</string>
+    <string name="menu_camera_manager">CameraManager</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_more">More</string>
+
 
 </resources>

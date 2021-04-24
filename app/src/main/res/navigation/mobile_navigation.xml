@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mediacodecencode.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home"/>
+
+    <activity
+        android:id="@+id/nav_encode"
+        android:label="@string/menu_encode"
+        android:name="com.example.mediacodecencode.YUVEncodeActivity" />
+
+    <fragment
+        android:id="@+id/nav_decode"
+        android:name="com.example.mediacodecencode.ui.home.HomeFragment"
+        android:label="@string/menu_decode"
+        tools:layout="@layout/fragment_home"/>
+
+    <activity
+        android:id="@+id/nav_yuvplayer"
+        android:label="@string/menu_yuvplayer"
+        android:name="com.example.mediacodecencode.YUVPlayerActivity" />
+
+    <fragment
+        android:id="@+id/nav_h264player"
+        android:name="com.example.mediacodecencode.ui.home.HomeFragment"
+        android:label="@string/menu_h264player"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_mediacodecinfo"
+        android:name="com.example.mediacodecencode.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_mediacodecinfo"
+        tools:layout="@layout/fragment_slideshow" />
+        <!--tools:layout="@layout/fragment_slideshow" />-->
+
+
+    <fragment
+        android:id="@+id/nav_camera_manager"
+        android:name="com.example.mediacodecencode.ui.home.HomeFragment"
+        android:label="@string/menu_camera_manager"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_setting"
+        android:name="com.example.mediacodecencode.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_setting"
+        tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.mediacodecencode.ui.gallery.GalleryFragment"
+        android:label="@string/menu_more"
+        tools:layout="@layout/fragment_gallery" />
+
+</navigation>

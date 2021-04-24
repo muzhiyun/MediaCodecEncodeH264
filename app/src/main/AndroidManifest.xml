@@ -2,40 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mediacodecencode"
     android:versionCode="1"
-    android:versionName="1.0" >
-    
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+       <activity android:name=".YUVEncodeActivity" />
         <activity
-            android:name=".YuvPlayer"
-            android:screenOrientation="fullSensor" >
-
+            android:name=".YUVPlayerActivity"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
-                <!--<category android:name="android.intent.category.BROWSABLE" />-->
-                <data android:scheme="file"/>
+                <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
+                <data android:scheme="file" />
                 <data android:pathPattern=".*\\.yuv" />
                 <data android:pathPattern=".*\\.YUV" />
                 <data android:host="*" />
                 <data android:mimeType="*/*" />
             </intent-filter>
-
         </activity>
     </application>
 

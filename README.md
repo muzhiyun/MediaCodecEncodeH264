@@ -13,13 +13,19 @@ MediaCodec 编码 onPreviewFrame 回调的YUV数据为 h264
 
 ---
 
-基于daoke666的[MediaCodecEncodeH264](https://github.com/daoke666/MediaCodecEncodeH264)改造，以上为原作者README。
+~~基于daoke666的[MediaCodecEncodeH264](https://github.com/daoke666/MediaCodecEncodeH264)改造~~
+
+基于sszhangpengfei的[MediaCodecEncodeH264](https://github.com/sszhangpengfei/MediaCodecEncodeH264)改造，以上为原作者README。
 
 另有参考如下项目，一并表示感谢：
 
 [yishuinanfeng/YuvVideoPlayerDemo](https://github.com/yishuinanfeng/YuvVideoPlayerDemo)
 
 [chinghungpan/MediaCodecDecodeRawStreamToYuv](https://github.com/chinghungpan/MediaCodecDecodeRawStreamToYuv)
+
+[Eajy/MaterialDesignDemo](https://github.com/Eajy/MaterialDesignDemo)
+
+
 
 ### 目前改动如下：
 
