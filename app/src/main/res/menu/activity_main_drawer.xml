@@ -9,21 +9,21 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="@string/menu_home" />
         <item
-            android:id="@+id/nav_encode"
+            android:id="@+id/nav_yuv_encode_to_h264"
             android:icon="@drawable/ic_filmstrip_black_24dp"
-            android:title="@string/menu_encode" />
-        <item
-            android:id="@+id/nav_decode"
-            android:icon="@drawable/ic_alpha_h_box_black_24dp"
-            android:title="@string/menu_decode" />
+            android:title="@string/menu_yuv_encode_to_h264" />
         <item
             android:id="@+id/nav_yuvplayer"
             android:icon="@drawable/ic_menu_slideshow"
             android:title="@string/menu_yuvplayer" />
         <item
-            android:id="@+id/nav_h264player"
+            android:id="@+id/nav_h264265_decode_and_player"
+            android:icon="@drawable/ic_alpha_h_box_black_24dp"
+            android:title="@string/menu_h264265_decode_and_player" />
+        <item
+            android:id="@+id/nav_mediaplayer"
             android:icon="@drawable/ic_movie_open_black_24dp"
-            android:title="@string/menu_h264player" />
+            android:title="@string/menu_mediaplayer" />
         <item
             android:id="@+id/nav_mediacodecinfo"
             android:icon="@drawable/ic_info_black_24dp"

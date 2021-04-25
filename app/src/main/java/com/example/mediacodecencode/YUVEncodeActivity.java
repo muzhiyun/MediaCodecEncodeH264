@@ -111,7 +111,6 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
 	}
     Button Button_switch ;
     Button Button_send ;
-    Button Button_play ;
 
 	private void init(){
 	    switch(video_select)
@@ -155,7 +154,7 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
 
 
 
-    private void showWaringDialog(String Title,String Message,String Button) {
+    private void showWaringDialog(String Title, String Message, String Button, final boolean iS_exit) {
         AlertDialog dialog = new AlertDialog.Builder(this)
                 .setTitle(Title)
                 .setMessage(Message)
@@ -163,7 +162,7 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         // 一般情况下如果用户不授权的话，功能是无法运行的，做退出处理
-                        finish();
+                        if(iS_exit)  finish();
                     }
                 }).show();
     }
@@ -271,11 +270,11 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
             try {
                 if(openfile()!=0)
                 {
-                    showWaringDialog("警告","YUV文件不存在,请检查或切换输入源为Camera！！！ ","确认");
+                    showWaringDialog("警告","YUV文件不存在,请检查或切换输入源为Camera！！！ ","确认",false);
                 }
 
             } catch (FileNotFoundException e) {
-                showWaringDialog("警告","YUV文件读取异常,请检查或切换输入源为Camera！！！ ","确认");
+                showWaringDialog("警告","YUV文件读取异常,请检查或切换输入源为Camera！！！ ","确认",false);
 
             }
 
@@ -329,7 +328,7 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
             editor.commit();
             Log.e("Button","Switch Source For Camera");
         }
-        showWaringDialog("警告","切换成功，请点击确认退出后重新打开应用！！！ ","确认");
+        showWaringDialog("警告","切换成功，请点击确认退出后重新打开应用！！！ ","确认",true);
     }
 
 
@@ -363,7 +362,7 @@ public class YUVEncodeActivity extends Activity  implements SurfaceHolder.Callba
                 fulling = false;
                 //停止并摧毁数据填充进程
             }
-            Button_send.setText("Stoping");
+            Button_send.setText("Stop");
         }
     }
 

@@ -6,13 +6,15 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
+import com.example.mediacodecencode.YUVPlayerActivity;
+
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
 public class YuvPlayer extends GLSurfaceView implements Runnable,  SurfaceHolder.Callback, GLSurfaceView.Renderer {
 
    // private final static String PATH = "/sdcard/sintel_640_360.yuv";
-    private final static String PATH = "/sdcard/test_NV21.yuv";
+   // public final static String PATH = "/sdcard/test_NV21.yuv";
 
     public YuvPlayer(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -40,7 +42,8 @@ public class YuvPlayer extends GLSurfaceView implements Runnable,  SurfaceHolder
      startPlay();
     }
     public void startPlay(){
-     loadYuv(PATH,getHolder().getSurface());
+
+     loadYuv(YUVPlayerActivity.path,getHolder().getSurface());
     }
 
     public native void loadYuv(String url, Object surface);

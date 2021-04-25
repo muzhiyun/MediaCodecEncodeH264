@@ -22,15 +22,27 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-       <activity android:name=".YUVEncodeActivity" />
+        <activity
+            android:name=".H264265DecodePlayerActivity"
+            android:screenOrientation="fullSensor">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="file" />
+                <data android:pathPattern=".*\\.h264" />
+                <data android:pathPattern=".*\\.h264" />
+                <data android:pathPattern=".*\\.h265" />
+                <data android:pathPattern=".*\\.h265" />
+                <data android:host="*" />
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".YUVPlayerActivity"
             android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
-
                 <category android:name="android.intent.category.DEFAULT" />
-                <!-- <category android:name="android.intent.category.BROWSABLE" /> -->
                 <data android:scheme="file" />
                 <data android:pathPattern=".*\\.yuv" />
                 <data android:pathPattern=".*\\.YUV" />
@@ -38,6 +50,8 @@
                 <data android:mimeType="*/*" />
             </intent-filter>
         </activity>
+        <activity android:name=".YUVEncodeActivity" />
+        <!--<activity android:name=".H264DecodeActivity" />-->
     </application>
 
 </manifest>

@@ -12,25 +12,23 @@
         tools:layout="@layout/fragment_home"/>
 
     <activity
-        android:id="@+id/nav_encode"
-        android:label="@string/menu_encode"
+        android:id="@+id/nav_yuv_encode_to_h264"
+        android:label="@string/menu_yuv_encode_to_h264"
         android:name="com.example.mediacodecencode.YUVEncodeActivity" />
-
-    <fragment
-        android:id="@+id/nav_decode"
-        android:name="com.example.mediacodecencode.ui.home.HomeFragment"
-        android:label="@string/menu_decode"
-        tools:layout="@layout/fragment_home"/>
 
     <activity
         android:id="@+id/nav_yuvplayer"
         android:label="@string/menu_yuvplayer"
         android:name="com.example.mediacodecencode.YUVPlayerActivity" />
 
+    <activity
+        android:id="@+id/nav_h264265_decode_and_player"
+        android:label="@string/menu_h264265_decode_and_player"
+        android:name="com.example.mediacodecencode.H264265DecodePlayerActivity" />
     <fragment
-        android:id="@+id/nav_h264player"
+        android:id="@+id/nav_mediaplayer"
         android:name="com.example.mediacodecencode.ui.home.HomeFragment"
-        android:label="@string/menu_h264player"
+        android:label="@string/menu_mediaplayer"
         tools:layout="@layout/fragment_home" />
 
     <fragment
@@ -38,8 +36,6 @@
         android:name="com.example.mediacodecencode.ui.gallery.GalleryFragment"
         android:label="@string/menu_mediacodecinfo"
         tools:layout="@layout/fragment_gallery" />
-        <!--tools:layout="@layout/fragment_slideshow" />-->
-
 
     <fragment
         android:id="@+id/nav_camera_manager"
