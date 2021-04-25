@@ -33,6 +33,7 @@ MediaCodec 编码 onPreviewFrame 回调的YUV数据为 h264
 - 增加YUV dump，默认dump数据格式为NV21，支持切换为NV12、I420
 - 增加使用YUV文件做input Source，目前仅支持NV21格式的YUV文件，可通过右上角Button切换Source为Camera或File。
 - 支持播放YUV
+- 增加简易mediacodecinfo查看功能
 
 ### 开发中
 - 支持切换编码解码时的分辨率，目标支持720P、1080P、3840P、

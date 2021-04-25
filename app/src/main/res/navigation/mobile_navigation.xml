@@ -35,9 +35,9 @@
 
     <fragment
         android:id="@+id/nav_mediacodecinfo"
-        android:name="com.example.mediacodecencode.ui.slideshow.SlideshowFragment"
+        android:name="com.example.mediacodecencode.ui.gallery.GalleryFragment"
         android:label="@string/menu_mediacodecinfo"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_gallery" />
         <!--tools:layout="@layout/fragment_slideshow" />-->
 
 
@@ -55,8 +55,8 @@
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.example.mediacodecencode.ui.gallery.GalleryFragment"
+        android:name="com.example.mediacodecencode.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_more"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_slideshow" />
 
 </navigation>

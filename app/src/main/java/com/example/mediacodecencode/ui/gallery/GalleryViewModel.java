@@ -7,10 +7,10 @@ import android.arch.lifecycle.ViewModel;
 public class GalleryViewModel extends ViewModel {
 
     private MutableLiveData<String> mText;
-
+    String TAG="MediacodecInfo";
     public GalleryViewModel() {
         mText = new MutableLiveData<>();
-        mText.setValue("This is gallery fragment");
+        mText.setValue("");
     }
 
     public LiveData<String> getText() {
