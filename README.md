@@ -46,10 +46,11 @@ MediaCodec 编码 onPreviewFrame 回调的YUV数据为 h264
 
 ### 当前界面
 #### 侧滑菜单
-![功能菜单](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/Screenshot/Screenshot_20201212-152814.png)
+![功能菜单](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/master/Screenshot/Screenshot_20201212-152814.png)
+
 
 #### mediacodecInfo
-![mediacodecInfo](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/Screenshot/Screenshot_20201212-152820.png)
+![mediacodecInfo](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/master/Screenshot/Screenshot_20201212-152820.png)
 
 #### Camera/YUV文件编码为H.264
-![Camera/YUV文件编码为H.264](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/Screenshot/Screenshot_20201212-152842.png)
+![Camera/YUV文件编码为H.264](https://raw.githubusercontent.com/muzhiyun/MediaCodecEncodeH264/master/Screenshot/Screenshot_20201212-152842.png)
